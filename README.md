@@ -3,7 +3,7 @@
 A comprehensive financial education and services website with interactive calculators, learning resources, and professional financial guidance.
 
 ## 🌐 Live Website
-**[Visit Finance Academy](https://supriyamh27.github.io/Finance-engineSAR/)**
+**[Visit Finance Academy](https://www.Finance-engineSAR.com)**
 
 ## ✨ Features
 
@@ -67,7 +67,7 @@ A comprehensive financial education and services website with interactive calcul
 - No installation required
 
 ### How to Access
-1. Visit: [https://supriyamh27.github.io/Finance-engineSAR/](https://supriyamh27.github.io/Finance-engineSAR/)
+1. Visit: [https://www.Finance-engineSAR.com](https://www.Finance-engineSAR.com)
 2. Navigate through the menu to explore different sections
 3. Use the calculators to plan your finances
 
