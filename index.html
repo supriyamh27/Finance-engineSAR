@@ -5,52 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finance Academy & Services</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; }
-    header { background:#004d66; color:#fff; padding:20px; text-align:center; }
-    nav { background:#007799; padding:10px; text-align:center; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-    .container { padding:20px; }
-    .section { background:#fff; padding:20px; margin:20px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    footer { background:#004d66; color:#fff; text-align:center; padding:10px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+    header { background: linear-gradient(135deg, #004d66 0%, #007799 100%); color: #fff; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1.1em; opacity: 0.9; }
+    nav { background: rgba(0,119,153,0.95); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 1em; transition: color 0.3s; }
+    nav a:hover { color: #ffeb3b; text-decoration: underline; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .section { background: #fff; padding: 30px; margin: 20px 0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .section:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .section h2 { color: #004d66; margin-bottom: 15px; font-size: 1.8em; }
+    .section p { color: #333; line-height: 1.6; margin-bottom: 15px; }
+    form { display: grid; gap: 15px; }
+    label { font-weight: bold; color: #004d66; margin-bottom: 5px; }
+    input { padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; transition: border-color 0.3s; }
+    input:focus { outline: none; border-color: #007799; background-color: #f0f8ff; }
+    button { padding: 12px 30px; background: linear-gradient(135deg, #007799 0%, #005577 100%); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1em; transition: transform 0.2s, box-shadow 0.2s; }
+    button:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,119,153,0.4); }
+    button:active { transform: scale(0.98); }
+    #loanResult, #growthResult, #mortgageResult { color: #28a745; font-weight: bold; font-size: 1.1em; margin-top: 10px; }
+    canvas { margin-top: 20px; }
+    footer { background: linear-gradient(135deg, #004d66 0%, #003d52 100%); color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8em; }
+      nav a { margin: 0 10px; font-size: 0.9em; }
+      .section { padding: 20px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Finance Academy & Services</h1>
+    <h1>💰 Finance Academy & Services</h1>
     <p>Empowering smarter money decisions for individuals & businesses</p>
   </header>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Learn</a>
-    <a href="#">Services</a>
-    <a href="#">Tools</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="learn.html">Learn</a>
+    <a href="services.html">Services</a>
+    <a href="tools.html">Tools</a>
+    <a href="contact.html">Contact</a>
   </nav>
   <div class="container">
 
-    <!-- Education Section -->
     <div class="section">
-      <h2>📘 Learn Finance</h2>
-      <p>Explore guides on budgeting, investing, and financial literacy.</p>
-    </div>
-
-    <!-- Business Services -->
-    <div class="section">
-      <h2>💼 Our Services</h2>
-      <p>We offer consulting, workshops, and personalized financial planning.</p>
+      <h2>📘 Welcome to Finance Academy</h2>
+      <p>Master your finances with our comprehensive educational resources, professional services, and powerful financial tools. Whether you're just starting your financial journey or looking to optimize your wealth, we're here to guide you.</p>
     </div>
 
     <!-- Loan Calculator -->
     <div class="section">
       <h2>🧮 Loan Calculator</h2>
+      <p>Calculate your monthly loan payments with our easy-to-use calculator.</p>
       <form id="loanForm">
-        <label>Loan Amount:</label><br>
-        <input type="number" id="amount"><br><br>
-        <label>Annual Interest Rate (%):</label><br>
-        <input type="number" id="rate"><br><br>
-        <label>Loan Term (years):</label><br>
-        <input type="number" id="years"><br><br>
-        <button type="button" onclick="calculateLoan()">Calculate</button>
+        <div>
+          <label>Loan Amount (₹):</label>
+          <input type="number" id="amount" placeholder="Enter loan amount" required>
+        </div>
+        <div>
+          <label>Annual Interest Rate (%):</label>
+          <input type="number" id="rate" placeholder="Enter interest rate" step="0.01" required>
+        </div>
+        <div>
+          <label>Loan Term (years):</label>
+          <input type="number" id="years" placeholder="Enter loan term" required>
+        </div>
+        <button type="button" onclick="calculateLoan()">Calculate Monthly Payment</button>
       </form>
       <p id="loanResult"></p>
     </div>
@@ -58,16 +79,25 @@
     <!-- Investment Growth Calculator -->
     <div class="section">
       <h2>📈 Investment Growth Calculator</h2>
+      <p>Project your investment growth with compound interest and regular contributions.</p>
       <form id="investmentForm">
-        <label>Initial Investment:</label><br>
-        <input type="number" id="principal"><br><br>
-        <label>Annual Interest Rate (%):</label><br>
-        <input type="number" id="growthRate"><br><br>
-        <label>Years:</label><br>
-        <input type="number" id="growthYears"><br><br>
-        <label>Annual Contribution:</label><br>
-        <input type="number" id="contribution"><br><br>
-        <button type="button" onclick="calculateGrowth()">Calculate</button>
+        <div>
+          <label>Initial Investment (₹):</label>
+          <input type="number" id="principal" placeholder="Enter initial investment" required>
+        </div>
+        <div>
+          <label>Annual Interest Rate (%):</label>
+          <input type="number" id="growthRate" placeholder="Enter annual rate" step="0.01" required>
+        </div>
+        <div>
+          <label>Investment Period (years):</label>
+          <input type="number" id="growthYears" placeholder="Enter years" required>
+        </div>
+        <div>
+          <label>Annual Contribution (₹):</label>
+          <input type="number" id="contribution" placeholder="Enter annual contribution" required>
+        </div>
+        <button type="button" onclick="calculateGrowth()">Calculate Growth</button>
       </form>
       <p id="growthResult"></p>
       <canvas id="growthChart" width="400" height="200"></canvas>
@@ -76,16 +106,25 @@
     <!-- Mortgage Calculator -->
     <div class="section">
       <h2>🏠 Mortgage Calculator</h2>
+      <p>Calculate your monthly mortgage payment and view the amortization schedule.</p>
       <form id="mortgageForm">
-        <label>Home Price:</label><br>
-        <input type="number" id="homePrice"><br><br>
-        <label>Down Payment:</label><br>
-        <input type="number" id="downPayment"><br><br>
-        <label>Annual Interest Rate (%):</label><br>
-        <input type="number" id="mortgageRate"><br><br>
-        <label>Loan Term (years):</label><br>
-        <input type="number" id="mortgageYears"><br><br>
-        <button type="button" onclick="calculateMortgage()">Calculate</button>
+        <div>
+          <label>Home Price (₹):</label>
+          <input type="number" id="homePrice" placeholder="Enter home price" required>
+        </div>
+        <div>
+          <label>Down Payment (₹):</label>
+          <input type="number" id="downPayment" placeholder="Enter down payment" required>
+        </div>
+        <div>
+          <label>Annual Interest Rate (%):</label>
+          <input type="number" id="mortgageRate" placeholder="Enter interest rate" step="0.01" required>
+        </div>
+        <div>
+          <label>Loan Term (years):</label>
+          <input type="number" id="mortgageYears" placeholder="Enter loan term" required>
+        </div>
+        <button type="button" onclick="calculateMortgage()">Calculate Payment</button>
       </form>
       <p id="mortgageResult"></p>
       <canvas id="mortgageChart" width="400" height="200"></canvas>
@@ -96,45 +135,52 @@
     <p>&copy; 2026 Finance Academy & Services | All Rights Reserved</p>
   </footer>
 
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-  // Loan Calculator
   function calculateLoan() {
-    let amount = document.getElementById("amount").value;
-    let rate = document.getElementById("rate").value / 100 / 12;
-    let years = document.getElementById("years").value * 12;
-    let monthly = (amount * rate) / (1 - Math.pow(1 + rate, -years));
-    document.getElementById("loanResult").innerText = 
-      "Estimated Monthly Payment: ₹" + monthly.toFixed(2);
+    let amount = parseFloat(document.getElementById("amount").value);
+    let rate = parseFloat(document.getElementById("rate").value) / 100 / 12;
+    let years = parseInt(document.getElementById("years").value) * 12;
+    if (amount && rate && years) {
+      let monthly = (amount * rate) / (1 - Math.pow(1 + rate, -years));
+      let total = monthly * years;
+      let interest = total - amount;
+      document.getElementById("loanResult").innerText = 
+        "Monthly Payment: ₹" + monthly.toFixed(2) + " | Total Interest: ₹" + interest.toFixed(2) + " | Total Amount: ₹" + total.toFixed(2);
+    } else {
+      alert('Please fill all fields');
+    }
   }
 
-  // Investment Growth Calculator
   function calculateGrowth() {
     let principal = parseFloat(document.getElementById("principal").value);
     let rate = parseFloat(document.getElementById("growthRate").value) / 100;
     let years = parseInt(document.getElementById("growthYears").value);
     let contribution = parseFloat(document.getElementById("contribution").value);
+    
+    if (principal && rate && years && contribution) {
+      let values = [], labels = [];
+      let futureValue = principal;
+      for (let i = 1; i <= years; i++) {
+        futureValue = (futureValue + contribution) * (1 + rate);
+        values.push(futureValue.toFixed(2));
+        labels.push("Year " + i);
+      }
+      document.getElementById("growthResult").innerText = 
+        "Future Value: ₹" + futureValue.toFixed(2) + " | Total Invested: ₹" + (principal + contribution * years).toFixed(2);
 
-    let values = [], labels = [];
-    let futureValue = principal;
-    for (let i = 1; i <= years; i++) {
-      futureValue = (futureValue + contribution) * (1 + rate);
-      values.push(futureValue.toFixed(2));
-      labels.push("Year " + i);
+      if (window.growthChartInstance) window.growthChartInstance.destroy();
+      window.growthChartInstance = new Chart(document.getElementById('growthChart'), {
+        type: 'line',
+        data: { labels: labels, datasets: [{ label: 'Investment Value', data: values, borderColor: '#007799', backgroundColor: 'rgba(0,119,153,0.2)', fill: true, tension: 0.3, borderWidth: 2 }] },
+        options: { responsive: true, plugins: { legend: { display: true } } }
+      });
+    } else {
+      alert('Please fill all fields');
     }
-    document.getElementById("growthResult").innerText = 
-      "Future Value after " + years + " years: ₹" + futureValue.toFixed(2);
-
-    new Chart(document.getElementById('growthChart'), {
-      type: 'line',
-      data: { labels: labels, datasets: [{ label: 'Investment Value', data: values, borderColor: '#007799', backgroundColor: 'rgba(0,119,153,0.2)', fill: true, tension: 0.3 }] },
-      options: { responsive: true }
-    });
   }
 
-  // Mortgage Calculator
   function calculateMortgage() {
     let homePrice = parseFloat(document.getElementById("homePrice").value);
     let downPayment = parseFloat(document.getElementById("downPayment").value);
@@ -142,25 +188,32 @@
     let rate = parseFloat(document.getElementById("mortgageRate").value) / 100 / 12;
     let years = parseInt(document.getElementById("mortgageYears").value) * 12;
 
-    let monthly = (loanAmount * rate) / (1 - Math.pow(1 + rate, -years));
-    document.getElementById("mortgageResult").innerText = 
-      "Monthly Mortgage Payment: ₹" + monthly.toFixed(2);
+    if (homePrice && downPayment && rate && years) {
+      let monthly = (loanAmount * rate) / (1 - Math.pow(1 + rate, -years));
+      let totalPayment = monthly * years;
+      let totalInterest = totalPayment - loanAmount;
+      document.getElementById("mortgageResult").innerText = 
+        "Monthly Payment: ₹" + monthly.toFixed(2) + " | Total Interest: ₹" + totalInterest.toFixed(2) + " | Total Amount: ₹" + totalPayment.toFixed(2);
 
-    let balance = loanAmount;
-    let values = [], labels = [];
-    for (let i = 1; i <= years; i++) {
-      let interest = balance * rate;
-      let principal = monthly - interest;
-      balance -= principal;
-      values.push(balance > 0 ? balance.toFixed(2) : 0);
-      labels.push("Month " + i);
+      let balance = loanAmount;
+      let values = [], labels = [];
+      for (let i = 1; i <= years; i++) {
+        let interest = balance * rate;
+        let principal = monthly - interest;
+        balance -= principal;
+        values.push(balance > 0 ? balance.toFixed(2) : 0);
+        if (i <= 12 || i % 12 === 0) labels.push("Month " + i);
+      }
+
+      if (window.mortgageChartInstance) window.mortgageChartInstance.destroy();
+      window.mortgageChartInstance = new Chart(document.getElementById('mortgageChart'), {
+        type: 'line',
+        data: { labels: labels, datasets: [{ label: 'Remaining Balance', data: values, borderColor: '#cc0000', backgroundColor: 'rgba(204,0,0,0.2)', fill: true, tension: 0.3, borderWidth: 2 }] },
+        options: { responsive: true, plugins: { legend: { display: true } } }
+      });
+    } else {
+      alert('Please fill all fields');
     }
-
-    new Chart(document.getElementById('mortgageChart'), {
-      type: 'line',
-      data: { labels: labels, datasets: [{ label: 'Remaining Balance', data: values, borderColor: '#cc0000', backgroundColor: 'rgba(204,0,0,0.2)', fill: true, tension: 0.3 }] },
-      options: { responsive: true }
-    });
   }
   </script>
 </body>

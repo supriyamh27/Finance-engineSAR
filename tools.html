@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools - Finance Academy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+    header { background: linear-gradient(135deg, #004d66 0%, #007799 100%); color: #fff; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    nav { background: rgba(0,119,153,0.95); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ffeb3b; text-decoration: underline; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .section { background: #fff; padding: 30px; margin: 20px 0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .section h2 { color: #004d66; margin-bottom: 20px; font-size: 2em; }
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .tool-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .tool-card:hover { transform: translateY(-8px); }
+    .tool-card h3 { color: #004d66; font-size: 1.3em; margin-bottom: 10px; }
+    .tool-card p { color: #333; line-height: 1.6; margin-bottom: 15px; }
+    .tool-card .features { list-style: none; margin: 15px 0; }
+    .tool-card .features li { padding: 5px 0; color: #555; }
+    .tool-card .features li:before { content: "✓ "; color: #28a745; font-weight: bold; }
+    .btn-tool { display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, #007799 0%, #005577 100%); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: transform 0.2s; }
+    .btn-tool:hover { transform: scale(1.05); }
+    footer { background: linear-gradient(135deg, #004d66 0%, #003d52 100%); color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛠️ Financial Tools</h1>
+    <p>Powerful tools to manage your finances</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="learn.html">Learn</a>
+    <a href="services.html">Services</a>
+    <a href="tools.html">Tools</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+
+    <div class="section">
+      <h2>Available Financial Tools</h2>
+      <p>We provide a comprehensive suite of financial calculators and tools to help you make informed decisions. All tools are free and easy to use.</p>
+    </div>
+
+    <div class="section">
+      <h2>Calculators & Planning Tools</h2>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h3>🧮 Loan Calculator</h3>
+          <p>Calculate monthly loan payments, total interest, and amortization schedules.</p>
+          <ul class="features">
+            <li>Monthly payment calculation</li>
+            <li>Total interest breakdown</li>
+            <li>Loan comparison</li>
+            <li>Payment schedule</li>
+          </ul>
+          <a href="index.html#loanForm" class="btn-tool">Use Tool</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>📈 Investment Growth Calculator</h3>
+          <p>Project your investment growth with compound interest calculations.</p>
+          <ul class="features">
+            <li>Compound interest calculation</li>
+            <li>Regular contribution tracking</li>
+            <li>Visual growth charts</li>
+            <li>Year-by-year projection</li>
+          </ul>
+          <a href="index.html#investmentForm" class="btn-tool">Use Tool</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>🏠 Mortgage Calculator</h3>
+          <p>Calculate your monthly mortgage payment and view the amortization schedule.</p>
+          <ul class="features">
+            <li>Monthly payment calculation</li>
+            <li>Amortization schedule</li>
+            <li>Balance visualization</li>
+            <li>Interest breakdown</li>
+          </ul>
+          <a href="index.html#mortgageForm" class="btn-tool">Use Tool</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>💳 Debt Payoff Calculator</h3>
+          <p>Create a debt payoff strategy and track your progress.</p>
+          <ul class="features">
+            <li>Multiple debt tracking</li>
+            <li>Payoff strategies</li>
+            <li>Timeline projection</li>
+            <li>Interest savings calculation</li>
+          </ul>
+          <a href="contact.html" class="btn-tool">Coming Soon</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>💰 Savings Calculator</h3>
+          <p>Plan your savings goals and track progress over time.</p>
+          <ul class="features">
+            <li>Savings goal tracking</li>
+            <li>Monthly target calculation</li>
+            <li>Timeline projection</li>
+            <li>Goal achievement tracking</li>
+          </ul>
+          <a href="contact.html" class="btn-tool">Coming Soon</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>📊 Budget Planner</h3>
+          <p>Create and manage your monthly budget effectively.</p>
+          <ul class="features">
+            <li>Income tracking</li>
+            <li>Expense categorization</li>
+            <li>Budget analysis</li>
+            <li>Spending insights</li>
+          </ul>
+          <a href="contact.html" class="btn-tool">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>How to Use Our Tools</h2>
+      <ol style="line-height: 2; color: #333;">
+        <li><strong>Select a Tool:</strong> Choose from our range of financial calculators based on your needs.</li>
+        <li><strong>Enter Your Information:</strong> Input your financial data accurately for precise calculations.</li>
+        <li><strong>View Results:</strong> Get instant calculations and visualizations of your financial scenarios.</li>
+        <li><strong>Make Decisions:</strong> Use the insights to make informed financial decisions.</li>
+        <li><strong>Plan Ahead:</strong> Export or save your results for future reference.</li>
+      </ol>
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; 2026 Finance Academy & Services | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

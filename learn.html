@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Finance - Finance Academy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+    header { background: linear-gradient(135deg, #004d66 0%, #007799 100%); color: #fff; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    nav { background: rgba(0,119,153,0.95); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ffeb3b; text-decoration: underline; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .course-section { background: #fff; padding: 30px; margin: 20px 0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .course-section h2 { color: #004d66; margin-bottom: 20px; font-size: 2em; }
+    .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .course-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .course-card:hover { transform: translateY(-8px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .course-card h3 { color: #004d66; margin-bottom: 10px; font-size: 1.3em; }
+    .course-card p { color: #333; line-height: 1.6; margin-bottom: 15px; }
+    .course-card .level { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; font-weight: bold; margin-bottom: 10px; }
+    .beginner { background: #28a745; color: white; }
+    .intermediate { background: #ffc107; color: #333; }
+    .advanced { background: #dc3545; color: white; }
+    .btn-enroll { display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, #007799 0%, #005577 100%); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: transform 0.2s; }
+    .btn-enroll:hover { transform: scale(1.05); }
+    footer { background: linear-gradient(135deg, #004d66 0%, #003d52 100%); color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Finance Academy</h1>
+    <p>Learn finance at your own pace</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="learn.html">Learn</a>
+    <a href="services.html">Services</a>
+    <a href="tools.html">Tools</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+
+    <!-- Beginner Courses -->
+    <div class="course-section">
+      <h2>🟢 Beginner Level</h2>
+      <p>Start your financial journey with these foundational courses.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <span class="level beginner">Beginner</span>
+          <h3>Financial Basics 101</h3>
+          <p>Learn fundamental concepts of money, savings, and budgeting. Perfect for beginners.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <span class="level beginner">Beginner</span>
+          <h3>Budgeting Mastery</h3>
+          <p>Create and maintain an effective budget. Learn tracking methods and financial discipline.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <span class="level beginner">Beginner</span>
+          <h3>Emergency Fund Planning</h3>
+          <p>Build your emergency fund with strategic planning and consistent saving habits.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intermediate Courses -->
+    <div class="course-section">
+      <h2>🟡 Intermediate Level</h2>
+      <p>Deepen your financial knowledge with advanced topics.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <span class="level intermediate">Intermediate</span>
+          <h3>Credit & Debt Management</h3>
+          <p>Understand credit scores, debt strategies, and how to manage loans effectively.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <span class="level intermediate">Intermediate</span>
+          <h3>Investing Fundamentals</h3>
+          <p>Learn stock market basics, mutual funds, bonds, and diversification strategies.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <span class="level intermediate">Intermediate</span>
+          <h3>Real Estate Investment</h3>
+          <p>Master property investment, home buying, and real estate portfolio building.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advanced Courses -->
+    <div class="course-section">
+      <h2>🔴 Advanced Level</h2>
+      <p>Expert-level courses for serious wealth builders.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <span class="level advanced">Advanced</span>
+          <h3>Portfolio Management</h3>
+          <p>Build and manage a diversified investment portfolio for maximum returns.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <span class="level advanced">Advanced</span>
+          <h3>Wealth Building Strategies</h3>
+          <p>Advanced techniques for creating and protecting long-term wealth.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <span class="level advanced">Advanced</span>
+          <h3>Business Finance</h3>
+          <p>Financial planning and management for entrepreneurs and business owners.</p>
+          <a href="#" class="btn-enroll">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; 2026 Finance Academy & Services | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
