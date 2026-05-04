@@ -15,7 +15,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
     .section { background: #fff; padding: 30px; margin: 20px 0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     .section h2 { color: #004d66; margin-bottom: 20px; font-size: 2em; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin: 30px 0; }
     .contact-info { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 25px; border-radius: 10px; }
     .contact-info h3 { color: #004d66; margin-bottom: 15px; font-size: 1.3em; }
     .contact-item { margin-bottom: 20px; }
@@ -25,13 +25,13 @@
     label { font-weight: bold; color: #004d66; }
     input, textarea { padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; font-family: inherit; transition: border-color 0.3s; }
     input:focus, textarea:focus { outline: none; border-color: #007799; background-color: #f0f8ff; }
-    button { padding: 12px 30px; background: linear-gradient(135deg, #007799 0%, #005577 100%); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1em; transition: transform 0.2s; }
+    button { padding: 12px 30px; background: linear-gradient(135deg, #007799 0%, #005577 100%); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1em; }
     button:hover { transform: scale(1.05); }
     .faq { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; margin-bottom: 15px; }
     .faq h4 { color: #004d66; margin-bottom: 10px; }
     .faq p { color: #333; line-height: 1.6; }
     .social-links { margin-top: 20px; }
-    .social-links a { display: inline-block; width: 40px; height: 40px; background: #007799; color: white; text-align: center; line-height: 40px; border-radius: 50%; text-decoration: none; margin-right: 10px; transition: transform 0.2s; }
+    .social-links a { display: inline-block; width: 40px; height: 40px; background: #007799; color: white; text-align: center; line-height: 40px; border-radius: 50%; text-decoration: none; margin-right: 10px; }
     .social-links a:hover { transform: scale(1.1); }
     footer { background: linear-gradient(135deg, #004d66 0%, #003d52 100%); color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
     @media (max-width: 768px) {
@@ -83,44 +83,6 @@
             <button type="submit">Send Message</button>
           </form>
         </div>
-
-        <!-- Contact Information -->
-        <div>
-          <h3>Contact Information</h3>
-          
-          <div class="contact-info">
-            <div class="contact-item">
-              <strong>📍 Mumbai Office</strong>
-              <p>Finance Academy Building<br>Bandra, Mumbai - 400050<br>Maharashtra, India</p>
-            </div>
-            <div class="contact-item">
-              <strong>📍 Delhi Office</strong>
-              <p>Finance Hub Tower<br>Connaught Place, Delhi - 110001<br>Delhi, India</p>
-            </div>
-            <div class="contact-item">
-              <strong>📧 Email</strong>
-              <p><a href="mailto:info@financeacademy.com" style="color: #007799; text-decoration: none;">info@financeacademy.com</a><br>
-              <a href="mailto:support@financeacademy.com" style="color: #007799; text-decoration: none;">support@financeacademy.com</a></p>
-            </div>
-            <div class="contact-item">
-              <strong>📞 Phone</strong>
-              <p>+91-22-1234-5678<br>+91-11-9876-5432<br>Toll Free: 1800-FINANCE</p>
-            </div>
-            <div class="contact-item">
-              <strong>🕒 Office Hours</strong>
-              <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
-            </div>
-            
-            <div class="social-links">
-              <strong>Follow Us:</strong><br>
-              <a href="#" title="Facebook">f</a>
-              <a href="#" title="Twitter">𝕏</a>
-              <a href="#" title="LinkedIn">in</a>
-              <a href="#" title="Instagram">📷</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -130,7 +92,7 @@ Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
       
       <div class="faq">
         <h4>❓ How do I get started with Finance Academy?</h4>
-        <p>You can start by exploring our free learning resources on the Learn page, trying our financial calculators, or contacting us to discuss our professional services. Choose what suits your needs best.</p>
+        <p>You can start by exploring our free learning resources on the Learn page, trying our financial calculators, or using the contact form to get in touch with us.</p>
       </div>
       
       <div class="faq">
@@ -140,12 +102,12 @@ Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
       
       <div class="faq">
         <h4>❓ What services does Finance Academy offer?</h4>
-        <p>We offer financial consulting, wealth management, retirement planning, investment guidance, real estate advisory, and corporate financial wellness programs. Check our Services page for detailed information.</p>
+        <p>We offer financial consulting, wealth management, retirement planning, investment guidance, real estate advisory, and corporate financial wellness programs. Check our Services page for details.</p>
       </div>
       
       <div class="faq">
         <h4>❓ How much do your professional services cost?</h4>
-        <p>We offer flexible pricing plans starting from ₹5,000 per month for basic consulting to ₹30,000+ per month for elite wealth management. Contact us for a customized quote based on your needs.</p>
+        <p>We offer flexible pricing plans for various financial services. Contact us through the form above for a customized quote based on your needs.</p>
       </div>
       
       <div class="faq">
@@ -160,7 +122,7 @@ Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
       
       <div class="faq">
         <h4>❓ Do you provide personalized financial plans?</h4>
-        <p>Yes! Our Premium and Elite plans include personalized financial planning. We analyze your situation and create a customized roadmap for your financial goals.</p>
+        <p>Yes! We offer personalized financial planning services. We analyze your situation and create a customized roadmap for your financial goals. Contact us for more information.</p>
       </div>
       
       <div class="faq">
