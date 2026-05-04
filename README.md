@@ -56,8 +56,7 @@ A comprehensive financial education and services website with interactive calcul
 
 ### 5. **Contact (contact.html)**
    - Contact form
-   - Office locations
-   - Contact information
+   - Office information
    - FAQ section
    - Social media links
 
@@ -121,7 +120,7 @@ Shows: Monthly payment, total interest, amortization schedule
 - **Advanced**: Portfolio Management, Wealth Building, Business Finance
 
 ### Service Offerings
-- Consultation (₹5,000-₹30,000/month)
+- Consultation packages available
 - Portfolio Management
 - Tax Planning
 - Estate Planning
@@ -139,10 +138,8 @@ Shows: Monthly payment, total interest, amortization schedule
 - ₹500Cr+ wealth managed (simulated)
 - 99% client satisfaction rate (simulated)
 
-## 📞 Contact Information
-- **Email**: info@financeacademy.com
-- **Phone**: +91-22-1234-5678 (Mumbai)
-- **Office Hours**: Monday-Friday 9 AM - 6 PM
+## 📞 Contact
+For inquiries, please use the contact form available on the Contact page of the website.
 
 ## 🔄 Future Enhancements
 - [ ] Debt payoff calculator
@@ -163,10 +160,7 @@ Shows: Monthly payment, total interest, amortization schedule
 - Cross-browser compatible
 
 ## 🤝 Support
-For questions, issues, or suggestions:
-1. Use the contact form on the Contact page
-2. Email: support@financeacademy.com
-3. Call our helpline: 1800-FINANCE
+For questions, issues, or suggestions, use the contact form on the Contact page.
 
 ## 📄 License
 All content © 2026 Finance Academy & Services. All Rights Reserved.
